@@ -1,6 +1,6 @@
 # Mechanisms_design_and_testing
 
-## Overview of the repostitory
+## Overview of the repository
 <div align="justify">
 Designing and testing mechanisms is essential for the development of mechatronic systems, such as manufacturing machinery or robotic assemblies. In an attempt to speed up mechanism calculations, specialized software as Autocad or Solidworks has been developed. Nevertheless, in many instances, complex FEM simulations are required in final stages of manufacturing. Initially, theoretical force and stress estimations are enough for making design decisions.
 <br />
@@ -46,7 +46,7 @@ The following figure shows the calculated mechanism by using our algorithms. Dim
 
 <br />
 
-### Structure deformation after appliyng a vertical force of 15kN
+### Structure deformation after applying a vertical force of 15kN
 
 The following figure shows the structure with a force applied vertically at its top. Color coded elements show which ones are under the most stress due to external forces (red being the highest). The deformed structure can be visualized on the right side:
 
