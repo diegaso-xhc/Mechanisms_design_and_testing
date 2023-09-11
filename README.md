@@ -31,7 +31,7 @@ For analysis of 3D structures the user needs to run the main.m file (programa pr
 The following figure shows the calculated mechanism by using our algorithms. Dimensional information is displayed at the bottom left:
 
 <p align="center">
-  <img src="/Visualizations/Mechanism_synthesis_1.png" width="650" />  
+  <img src="/Visualizations/Mechanism_synthesis_1.png" width="700" />  
 </p>
 
 <br />
@@ -41,17 +41,17 @@ The following figure shows the calculated mechanism by using our algorithms. Dim
 The following figure shows the calculated mechanism by using our algorithms. Dimensional information is displayed at the bottom left:
 
 <p align="center">
-  <img src="/Visualizations/Mechanism_synthesis_2.png" width="650" />  
+  <img src="/Visualizations/Mechanism_synthesis_2.png" width="700" />  
 </p>
 
 <br />
 
 ### Structure deformation after appliyng a vertical force of 15kN
 
-The following figure shows the structure with a force applied vertically at its top. Color coded elements show which ones are under the most stress due to external forces (red being the highest). On the right side the deformed structure can be visualized:
+The following figure shows the structure with a force applied vertically at its top. Color coded elements show which ones are under the most stress due to external forces (red being the highest). The deformed structure can be visualized on the right side:
 
 <p align="center">
-  <img src="/Visualizations/Structures.png" width="650" />  
+  <img src="/Visualizations/Structures.png" width="700" />  
 </p>
 
 <br />
