@@ -5,7 +5,7 @@
 Designing and testing mechanisms is essential for the development of mechatronic systems, such as manufacturing machinery or robotic assemblies. In an attempt to speed up mechanism calculations, specialized software as Autocad or Solidworks has been developed. Nevertheless, in many instances, complex FEM simulations are required in final stages of manufacturing. Initially, theoretical force and stress estimations are enough for making design decisions.
 <br />
 <br />
-This repository provides algorithms to automatically design, visualize and calculate planar mechanisms. It also provides algorithms to calculate stress and force effects on 3D structures. 
+This repository provides algorithms to automatically design, visualize and calculate planar mechanisms. It also provides algorithms to calculate stress and force effects on 3D structures for initial design estimations. 
 <br /> 
 <br /> 
 
