@@ -11,93 +11,51 @@ This repository provides algorithms to automatically design, visualize and calcu
 
 ## Understanding repository
 
-The repository was developed in C#, using the following software version:
+The repository contains two parts. One for planar mechanism synthesis, and another one for 3D structures analysis. The algorithms were implemented using:
 
 ```
-- Microsoft Visual Studio Community 2019 (Version 16.11.29)
-- Target Framework: .NET Framework 4.6.1
-- OxyPlot.Wpf (Version 2.1.2) --> Can be installed using NuGet package manager
-- OxyPlot (Version 2.1.2) --> Can be installed using NuGet package manager
-- OxyPlot.Wpf.Shared (Version 2.1.2) --> Can be installed using NuGet package manager
+- Mechanism synthesis --> Initially Python 2.0, currently tested and running in Python 3.9 (some minor functionalities might need updating)
+- Analysis of 3D structures --> Tested in Matlab R2021b
 ```
-
-The project has been compiled using the aforementioned libraries into a self contained project. Nevertheless, if some compilation errors arise, please check the aforementioned versions. The most relevant files on the repository are detailed as follows:
-
-```
-- backupFunctions.cs --> Operates on parameters within system modeling, such as raw phase and angle vectors extracted from a system's response.
-- DifferentialEquations.cs --> Handles system model representations, transfer functions arithmetics, contains Runge–Kutta methods, prints different model representations of a system.
-- fastFourierTransform.cs --> Transforms time space vectors into the frequency (fast Fourier transform) and viceversa (inverse fast Fourier transform).
-- Matrix.cs --> Handles matrices in an efficient manner.
-- MainWindow.xaml --> Contains the code required by WPF to launch the GUI for the user.
-- MainWindow.xaml.cs --> Handles user requests and returns required outputs.
-```
+Mechanism synthesis launches a graphical interface where the user needs to input expected link motions. Then the program generates a visualization of the resulting mechanism (if plausible) and outputs corresponding dimensions for testing. 
 <br />
-UPDATE (09.2023): Due to a recent change of the chart visualization library, it is worth noticing at the moment only the time response and frequency spectrum can be displayed graphically. The authors are currently updating the Bode and Nichols diagrams. Nevertheless, besides visualization, all functions are implemented and fully functional. The user simply needs to print the outputs or create methods to use them.
+
+For analysis of 3D structures the user needs to run the main.m file (programa principal in Spanish). Nodes and forces applied to the structure can be modified according to the user application. The algorithms in this repository use the theory of virtual work to calculate forces and stress values in the entirety of the structure. 
 <br />
 <br />
 
+## Examples
   
-### Time response to a Step-like excitement signal
+### Mechanism synthesis for two given positions
 
-The following figure shows the time response of a system to a step-like excitement signal:
-
-<p align="center">
-  <img src="/Visualizations/Systems_time_response.PNG" width="650" />  
-</p>
+The following figure shows the calculated mechanism by using our algorithms. Dimensional information is displayed at the bottom left:
 
 <p align="center">
-   <img src="/Visualizations/Time_response_cursor.png" width="700" />
+  <img src="/Visualizations/Mechanism_synthesis_1.png" width="650" />  
 </p>
+
 <br />
 
+### Mechanism synthesis for three given positions
 
-## Contributions
-
-The contributions of this repository can be summarized as follows:
-
-```
-- Algorithms for handling differential equations, transfer functions, and state space representations
-- Algorithms to manipulate matrices in an intuitive and efficient manner
-- Algorithms to operate on system response parameters (e.g. angle, phase, etc.)
-- An intuitive GUI (with similar nomenclature as MATLAB for transfer functions) to analyze systems time and frequency response
-- An open source code, which can be used for teaching of fundamentals of control systems.
-```
-
-## Examples of GUI usage
-
-### Time response to a Sine-wave-like excitement signal
-
-The following figure shows the time response of a system to a sine wave excitement signal of 4Hz. Note that in order to obtain the time response, the user needs to do the following:
-
-```
-- Input the transfer function: [numerator separated by commas];[denominator separated by commas]
-- Click on Create Model
-- Input the sampling time (dt), initial time (t(t0)), and final time in seconds.
-- If the user requires a step response, click on Step response. For sine wave excitements, please input the frequency of the sine wave and click on Sine response.
-- The user can then click on get time response or view frequency spectrum.
-- Although visualizations for Bode and Nichols charts are not available at the moment, the user can still click them and extract the frequency responses from the library.
-```
+The following figure shows the calculated mechanism by using our algorithms. Dimensional information is displayed at the bottom left:
 
 <p align="center">
-   <img src="/Visualizations/Sine_response.PNG" width="650" />
+  <img src="/Visualizations/Mechanism_synthesis_2.png" width="650" />  
 </p>
 
-### Time response to a Step-like excitement signal
+<br />
 
-The following figure shows the time response of a system to a step-like excitement signal:
+### Structure deformation after appliyng a vertical force of 15kN
+
+The following figure shows the structure with a force applied vertically at its top. Color coded elements show which ones are under the most stress due to external forces (red being the highest). On the right side the deformed structure can be visualized:
 
 <p align="center">
-  <img src="/Visualizations/Systems_time_response.PNG" width="650" />  
+  <img src="/Visualizations/Structures.png" width="650" />  
 </p>
 
-### Frequency spectrum of the input signal
-
-The following figure shows the frequency spectrum of an input sine-wave-like signal of 52Hz:
-
-<p align="center">
-   <img src="/Visualizations/Frequency_spectrum.PNG" width="650" />
-</p>
+<br />
 
 ## License
 
-Developed by Diego Hidalgo C. (2021). This repository is intended for research purposes only. If you wish to use any parts of the provided code for commercial purposes, please contact the author at hidalgocdiego@gmail.com.
+Developed by Diego Hidalgo C. (2023). This repository is intended for research purposes only. If you wish to use any parts of the provided code for commercial purposes, please contact the author at hidalgocdiego@gmail.com.
